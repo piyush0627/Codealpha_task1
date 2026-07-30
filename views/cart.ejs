@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Shopping Cart</h1>
+    <% cart.forEach(product => { %>
+        <div>
+            <h3><%= product.name %></h3>
+            <p>$<%= product.price %></p>
+        </div>
+    <% }) %>
+    <form action="/checkout" method="POST">
+        <button type="submit">Checkout</button>
+    </form>
+</body>
+</html>

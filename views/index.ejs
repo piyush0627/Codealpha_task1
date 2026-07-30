@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Products</h1>
+    <% products.forEach(product => { %>
+        <div>
+            <h3><%= product.name %></h3>
+            <p><%= product.description %></p>
+            <p>$<%= product.price %></p>
+            <form action="/cart/add/<%= product.id %>" method="POST">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    <% }) %>
+</body>
+</html>
